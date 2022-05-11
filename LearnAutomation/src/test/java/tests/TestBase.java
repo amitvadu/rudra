@@ -22,11 +22,11 @@ public class TestBase {
 		System.setProperty("webdriver.gecko.driver", driverPath);
 		driver = new FirefoxDriver();
 		
-		//String url = "https://www.toolsqa.com/automation-practice-form/";
-		String url = "http://10.151.32.152:8081/elitesmp/login.do";		    
+		String url = "https://www.toolsqa.com/";
+		//String url = "http://10.151.32.152:8081/elitesmp/login.do";		    
 		driver.get(url);
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();	
 		
 	}
