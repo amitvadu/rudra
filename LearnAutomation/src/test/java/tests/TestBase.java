@@ -22,7 +22,7 @@ public class TestBase {
 		System.setProperty("webdriver.gecko.driver", driverPath);
 		driver = new FirefoxDriver();
 		
-		String url = "https://www.toolsqa.com/";
+		String url = "http://www.toolsqa.com/";
 		//String url = "http://10.151.32.152:8081/elitesmp/login.do";		    
 		driver.get(url);
 		

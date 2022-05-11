@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
@@ -17,7 +18,7 @@ public class FillFormTest {
 	public void fillForm() {
 		System.out.println("1");
 		initB();
-		FillFormPage fillFormPage = PageFactory.initElements(driver, FillFormPage.class);
+		//FillFormPage fillFormPage = PageFactory.initElements(driver, FillFormPage.class);
 		
 		try {
 			Thread.sleep(10000);
@@ -27,7 +28,7 @@ public class FillFormTest {
 		
 		System.out.println("2");
 		
-		fillFormPage.setFirstName("Amit Prajapati");
+		//fillFormPage.setFirstName("Amit Prajapati");
 		
 		try {
 			Thread.sleep(10000);
@@ -38,16 +39,21 @@ public class FillFormTest {
 	}
 	
 	public void initB() {
-		String driverPath = System.getProperty("user.dir") + "//src//test//resources//drivers//chrome//chromedriver";
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
+		//String driverPath = System.getProperty("user.dir") + "//src//test//resources//drivers//chrome//chromedriver";
+		//System.setProperty("webdriver.chrome.driver", driverPath);
+		//driver = new ChromeDriver();
 		
-		//String url = "https://www.toolsqa.com/automation-practice-form/";
-		 String url = "http://10.151.32.152:8081/elitesmp/login.do";		    
+		String driverPath = System.getProperty("user.dir") + "//src//test//resources//drivers//firefox//geckodriver";
+		System.setProperty("webdriver.gecko.driver", driverPath);
+		driver = new FirefoxDriver();
+		
+		String url = "http://www.toolsqa.com/";
+		
+		//String url = "http://10.151.32.152:8081/elitesmp/login.do";		    
 		driver.get(url);
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		
 		try {
 			Thread.sleep(10000);
