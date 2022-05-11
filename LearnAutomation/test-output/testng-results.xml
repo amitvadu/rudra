@@ -2,61 +2,154 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="LearnAutomation" duration-ms="11241" started-at="2019-07-10T10:15:55Z" finished-at="2019-07-10T10:16:07Z">
+  <suite name="Default suite" duration-ms="60300" started-at="2022-05-11T16:12:01 IST" finished-at="2022-05-11T16:13:01 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="11241" started-at="2019-07-10T10:15:55Z" finished-at="2019-07-10T10:16:07Z">
-      <class name="tests.FillFormTest">
-        <test-method status="FAIL" signature="fillForm()[pri:0, instance:tests.FillFormTest@3ffc5af1]" name="fillForm" duration-ms="11211" started-at="2019-07-10T10:15:55Z" description="Verification of Learn Automation" finished-at="2019-07-10T10:16:07Z">
-          <exception class="java.lang.RuntimeException">
+    <test name="Default test" duration-ms="60300" started-at="2022-05-11T16:12:01 IST" finished-at="2022-05-11T16:13:01 IST">
+      <class name="tests.TestBase">
+        <test-method status="PASS" signature="init()[pri:0, instance:tests.TestBase@3a883ce7]" name="init" is-config="true" duration-ms="4397" started-at="2022-05-11T16:11:56 IST" finished-at="2022-05-11T16:12:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:tests.TestBase@3a883ce7]" name="tearDown" is-config="true" duration-ms="61" started-at="2022-05-11T16:13:01 IST" finished-at="2022-05-11T16:13:01 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[java.lang.InstantiationException: pages.FillFormPage]]>
+              <![CDATA[Failed to decode response from marionette
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'SSAHMDTL03706', ip: '10.121.19.134', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.18-100.fc33.x86_64', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211102105145, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 1008757, moz:profile: /tmp/rust_mozprofile.4YB93a..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.14.18-100.fc33.x86_64, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7e1219b9-3756-4e4f-8e71-4a02427afd6e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.InstantiationException: pages.FillFormPage
-at org.openqa.selenium.support.PageFactory.instantiatePage(PageFactory.java:134)
-at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:64)
-at tests.FillFormTest.fillForm(FillFormTest.java:20)
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'SSAHMDTL03706', ip: '10.121.19.134', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.18-100.fc33.x86_64', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 94.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20211102105145, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 1008757, moz:profile: /tmp/rust_mozprofile.4YB93a..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.14.18-100.fc33.x86_64, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 7e1219b9-3756-4e4f-8e71-4a02427afd6e
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:448)
+at tests.TestBase.tearDown(TestBase.java:36)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:64)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:364)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:318)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:351)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.InstantiationException: pages.FillFormPage
-at java.lang.Class.newInstance(Class.java:427)
-at org.openqa.selenium.support.PageFactory.instantiatePage(PageFactory.java:131)
-... 27 more
-Caused by: java.lang.NoSuchMethodException: pages.FillFormPage.<init>()
-at java.lang.Class.getConstructor0(Class.java:3082)
-at java.lang.Class.newInstance(Class.java:412)
-... 28 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TestBase -->
+      <class name="tests.FillFormTest">
+        <test-method status="FAIL" signature="fillForm()[pri:0, instance:tests.FillFormTest@4973813a]" name="fillForm" duration-ms="60226" started-at="2022-05-11T16:12:01 IST" description="Verification of Learn Automation" finished-at="2022-05-11T16:13:01 IST">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: DevToolsActivePort file doesn't exist
+  (Driver info: chromedriver=2.40.565383 (76257d1ab79276b2d53ee976b2c3e3b9f335cde7),platform=Linux 5.14.18-100.fc33.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.04 seconds
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'SSAHMDTL03706', ip: '10.121.19.134', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.18-100.fc33.x86_64', java.version: '1.8.0_241'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: DevToolsActivePort file doesn't exist
+  (Driver info: chromedriver=2.40.565383 (76257d1ab79276b2d53ee976b2c3e3b9f335cde7),platform=Linux 5.14.18-100.fc33.x86_64 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 60.04 seconds
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'SSAHMDTL03706', ip: '10.121.19.134', os.name: 'Linux', os.arch: 'amd64', os.version: '5.14.18-100.fc33.x86_64', java.version: '1.8.0_241'
+Driver info: driver.version: ChromeDriver
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$new$0(JsonWireProtocolResponse.java:53)
+at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$getResponseFunction$2(JsonWireProtocolResponse.java:91)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:212)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:181)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:168)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+at tests.FillFormTest.initB(FillFormTest.java:43)
+at tests.FillFormTest.fillForm(FillFormTest.java:19)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillForm -->
       </class> <!-- tests.FillFormTest -->
-    </test> <!-- Test -->
-  </suite> <!-- LearnAutomation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
