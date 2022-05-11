@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -13,9 +14,13 @@ public class TestBase {
 	@BeforeSuite
 	public void init() {
 		
-		String driverPath = System.getProperty("user.dir") + "//src//test//resources//drivers//chrome//chromedriver";
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
+		//String driverPath = System.getProperty("user.dir") + "//src//test//resources//drivers//chrome//chromedriver";
+		//System.setProperty("webdriver.chrome.driver", driverPath);
+		//driver = new ChromeDriver();
+		
+		String driverPath = System.getProperty("user.dir") + "//src//test//resources//drivers//firefox//geckodriver";
+		System.setProperty("webdriver.gecko.driver", driverPath);
+		driver = new FirefoxDriver();
 		
 		//String url = "https://www.toolsqa.com/automation-practice-form/";
 		String url = "http://10.151.32.152:8081/elitesmp/login.do";		    
